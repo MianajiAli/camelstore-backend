@@ -1,3 +1,5 @@
-from django.views.generic import TemplateView
-class MessageView(TemplateView):
-    template_name = "home.html"
+from django.views.generic import ListView
+from .models import Message
+class MessageView(ListView):
+    model= Message
+    template_name='home.html'
